@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+:root{
+    --bg:#09090B;
+    --card:rgba(255,255,255,.06);
+    --border:rgba(255,255,255,.08);
+    --purple:#7C3AED;
+    --purple2:#9333EA;
+    --text:#FFFFFF;
+    --gray:#B4B4C5;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    padding:40px 20px;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at top,#7C3AED40,transparent 40%),
+        radial-gradient(circle at bottom,#4C1D9540,transparent 45%);
+    z-index:-1;
+}
+
+.container{
+    width:100%;
+    max-width:540px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--purple),var(--purple2));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    box-shadow:0 0 35px rgba(124,58,237,.45);
+}
+
+.language-switch{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.language-switch button{
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    background:#17171E;
+    color:white;
+    cursor:pointer;
+    transition:.25s;
+    font-weight:600;
+}
+
+.language-switch button:hover{
+    transform:translateY(-2px);
+}
+
+.language-switch button.active{
+    background:linear-gradient(135deg,var(--purple),var(--purple2));
+}
+
+h1{
+    text-align:center;
+    font-size:2.3rem;
+    font-weight:800;
+}
+
+#subtitle{
+    margin-top:12px;
+    text-align:center;
+    color:var(--gray);
+    line-height:1.6;
+}
+
+.generator-card{
+    margin-top:35px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:24px;
+    backdrop-filter:blur(18px);
+    padding:28px;
+}
+
+.password-box{
+    display:flex;
+    gap:12px;
+}
+
+.password-box input{
+    flex:1;
+    background:#13131A;
+    border:none;
+    color:white;
+    padding:16px;
+    border-radius:14px;
+    font-size:17px;
+    outline:none;
+}
+
+.password-box button{
+    width:58px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--purple),var(--purple2));
+    color:white;
+    cursor:pointer;
+    font-size:22px;
+    transition:.25s;
+}
+
+.password-box button:hover{
+    transform:scale(1.08);
+}
+
+.setting-header{
+    display:flex;
+    justify-content:space-between;
+    margin:25px 0 10px;
+    font-weight:600;
+}
+
+input[type=range]{
+    width:100%;
+    accent-color:var(--purple);
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:18px;
+    color:#DDD;
+    cursor:pointer;
+}
+
+.checkbox input{
+    width:18px;
+    height:18px;
+}
+
+#generateBtn{
+    width:100%;
+    margin-top:28px;
+    padding:17px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg,var(--purple),var(--purple2));
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#generateBtn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(124,58,237,.45);
+}
+
+.strength{
+    margin-top:25px;
+}
+
+.strength-bar{
+    height:12px;
+    background:#191920;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+#strengthFill{
+    width:0%;
+    height:100%;
+    background:var(--purple);
+    transition:.35s;
+}
+
+#strengthText{
+    text-align:center;
+    margin-top:10px;
+    color:var(--gray);
+    font-weight:600;
+}
+
+.privacy-card{
+    margin-top:25px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:24px;
+}
+
+.privacy-card h2{
+    margin-bottom:12px;
+}
+
+.privacy-card p{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+@media(max-width:600px){
+
+.logo{
+    width:75px;
+    height:75px;
+    font-size:34px;
+}
+
+h1{
+    font-size:1.8rem;
+}
+
+.password-box{
+    flex-direction:column;
+}
+
+.password-box button{
+    width:100%;
+    height:55px;
+}
+
+.language-switch{
+    flex-direction:column;
+}
+
+}
